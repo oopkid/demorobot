@@ -2,7 +2,7 @@
 ${loginPage}  https://sprint3r1.wordpress.com
 ${usernameField}    user_login
 ${passwordField}    user_pass
-${waitseconds}  10
+${waitseconds}  30
 
 *** Keywords ***
 Fill Credential
@@ -10,7 +10,8 @@ Fill Credential
     Input Text      ${usernameField}  ${username}
     Input Password  ${passwordField}  ${password}
     Click Element    //*[@id="wp-submit"]
-Login Failed with Valid Credential
+
+Login Succeeded with Valid Credential
     Open Browser   ${loginPage}
     Click Element   //*[@id="masthead"]/button
     Wait Until Page Contains    Log in  ${waitseconds}

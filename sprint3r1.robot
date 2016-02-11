@@ -4,7 +4,7 @@ Resource  keywords.robot
 
 *** Test Cases ***
 Login with valid credential should succeeded
-    Login Failed with Valid Credential
+    Login Succeeded with Valid Credential
     Close Browser
 
 Login with invalid credential should failed
@@ -15,6 +15,12 @@ Login with invalid credential should failed
 
 Login with empty credential should failed
     Login Failed with Empty Credential
+
+#Post Entry
+#    Login Succeeded with Valid Credential
+#    Click Link   //*[@id="wp-admin-bar-ab-new-post"]/a
+#    Close Browser
+
 
 #Remember me
 #    Open Web
