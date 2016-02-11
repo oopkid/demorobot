@@ -4,12 +4,8 @@ Resource  keywords.robot
 
 *** Test Cases ***
 Login with valid credential should succeeded
-    Open Web
-    Open Sidebar
-    Click Link Log In
-    Fill Credential   sprint3r1   WorkingSoftware
-    Login Succeeded
-    Close Web
+    Login Failed with Valid Credential
+    Close Browser
 
 Login with invalid credential should failed
     [template]  Login Failed with Invalid Credential
